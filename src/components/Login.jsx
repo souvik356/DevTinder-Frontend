@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import axios from 'axios'
-import { useDispatch } from "react-redux";
-import { addUser } from "../AppStore/userSlice";
-
-const Login = () => {
-  const [emailID,setEmail] = useState('')
-  const [password,setPassword] = useState('')
-  const dispatch = useDispatch()
-=======
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
@@ -77,7 +66,6 @@ const Login = () => {
     </>
   )
 }
->>>>>>> efb2861615c702709a853f27c8b9d42a8f7b1f8b
 
   const handleSubmit = async () => {
     try {
@@ -125,6 +113,6 @@ const Login = () => {
       </div>
     </>
   );
-};
+;
 
 export default Login;
