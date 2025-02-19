@@ -14,6 +14,10 @@
     "axios": "^1.7.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+<<<<<<< HEAD
+=======
+    "react-hot-toast": "^2.5.2",
+>>>>>>> efb2861615c702709a853f27c8b9d42a8f7b1f8b
     "react-redux": "^9.2.0",
     "react-router": "^7.1.5"
   },

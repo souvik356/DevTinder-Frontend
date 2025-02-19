@@ -1,3 +1,4 @@
-Using DaisyUI for Design
-
-Add BaseURL , after login redirect to feed page
+- Using DaisyUI for Design
+- Created component folder
+- Inside component , NavBar is created is created
+- Login Page
