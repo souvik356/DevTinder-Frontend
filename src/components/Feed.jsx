@@ -2,7 +2,7 @@ import React from 'react'
 
 const Feed = () => {
   return (
-    <div>Feed</div>
+    <div className='mt-[4rem]'>Feed</div>
   )
 }
 

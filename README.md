@@ -1,3 +1,4 @@
 - Using DaisyUI for Design
 - Created component folder
 - Inside component , NavBar is created is created
+- Login Page
