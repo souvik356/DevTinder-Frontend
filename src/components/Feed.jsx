@@ -20,13 +20,13 @@ const Feed = () => {
         getFeed()
     },[])
 
-    if(feed.length === 0){
+  if(feed.length === 0){
       return (<div className='pt-[5rem]'>
         <h1 className='text-center font-bold'>No User Available</h1>
       </div>)
     }
   return (
-    feed &&<div className='mt-[5rem] flex items-center justify-center'>
+    feed &&<div className='pt-[5rem] pb-[4rem] flex items-center justify-center'>
       
       <UserCard user ={feed[0]}/>
     </div>
