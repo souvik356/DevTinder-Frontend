@@ -9,7 +9,7 @@ const NavBar = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const user = useSelector(state => state.user.value)
-    // console.log(user);
+    console.log('user from store',user);
     const handleLogout = async()=>{
       try {
         const response = await axios.post(`${BASE_URL}/logout`,{},{
@@ -29,7 +29,7 @@ const NavBar = () => {
     <Link to="/feed" className="btn btn-ghost text-xl">😎DevTinder</Link>
   </div>
   <div className="flex-none gap-2 mx-5">
-    {user && (<div className="dropdown dropdown-end">
+    {user.length !== 0 && (<div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className=" avatar gap-6 flex items-center">
        <p>Welcome {user.firstName}</p>
         <div className="w-10 rounded-full">

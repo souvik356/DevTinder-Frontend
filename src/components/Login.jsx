@@ -59,7 +59,7 @@ const Login = () => {
           setIsSignUp(false)
          }
        } catch (error) {
-        setError(error.data.message || "something went wrong")
+        setError(error?.data?.message || "something went wrong")
        }
     }
     
@@ -92,4 +92,5 @@ const Login = () => {
   )
 }
 
-export default Login
+ 
+export default Login;
