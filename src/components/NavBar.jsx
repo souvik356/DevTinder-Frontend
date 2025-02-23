@@ -17,7 +17,7 @@ const NavBar = () => {
           })
           if(response.data.success){
             dispatch(removeUser('null'))
-            navigate('/login')
+            navigate('/')
           }
       } catch (error) {
          console.error(error.message || error)

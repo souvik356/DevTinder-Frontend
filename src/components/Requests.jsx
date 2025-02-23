@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { BASE_URL } from './utils/Constants'
 import { connect, useDispatch, useSelector } from 'react-redux'
 import { addRequest, removeRequest } from './appStore/requestSlice'
-
+ 
 const Requests = () => {
     const [showToast, setShowToast] = useState(false)
     const [showErrorToast, setShowErrorToast] = useState(false)
@@ -24,7 +24,7 @@ const Requests = () => {
     useEffect(() => {
         getRequest()
     }, [])
-
+ 
     if (request === null) {
         return (
             <div className='pt-[5rem]'>
@@ -32,7 +32,7 @@ const Requests = () => {
             </div>
         )
     }
-
+ 
     const handleStatus = async (status, requestId) => {
         console.log(status);
         try {
@@ -113,5 +113,6 @@ const Requests = () => {
         </div>
     )
 }
-
+ 
 export default Requests
+ 
