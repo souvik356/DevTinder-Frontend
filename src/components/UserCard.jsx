@@ -6,7 +6,7 @@ import { removeUserFeed } from './appStore/feedSlice'
 
 const UserCard = ({user}) => {
     const dispatch = useDispatch()
-    const {_id,firstName,lastName,photoURL,about,gender,age,skills} = user
+    const { _id,firstName,lastName,photoURL,about,gender,age,skills } = user
     console.log(user);
     const handleStatus = async(status,userId)=>{
        try {
