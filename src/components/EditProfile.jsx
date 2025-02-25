@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import UserCard from './UserCard'
 import axios from 'axios'
 import { BASE_URL } from './utils/Constants'
@@ -19,6 +19,18 @@ const EditProfile = () => {
     const dispatch = useDispatch()
     const [showToast,setToast] = useState(false)
 
+    const fetchProfile = async()=>{
+        const response = await axios.get(`${BASE_URL}/profile/view`,{
+            withCredentials : true
+        })
+        console.log('fetch profile',response.data.data);
+        dispatch(addUser(response.data.data))
+    }
+
+    useEffect(()=>{
+            fetchProfile()
+    },[])
+
     const handleSaveProfile = async()=>{
         try {
             setError('')
@@ -38,6 +50,7 @@ const EditProfile = () => {
             setError(error.response.data.message || "something went wrong")
         }
     }
+
     return (
        user&& (<div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 p-4">
     <div className="bg-neutral w-full sm:w-96 md:w-[30rem] min-h-64 p-4 sm:p-6 rounded-3xl">

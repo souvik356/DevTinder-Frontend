@@ -25,7 +25,7 @@ const Login = () => {
           password
         }, { withCredentials: true });
 
-        console.log(response.data.error)
+        // console.log(response.data.error)
     
         if (response.data.error) {
           toast.error(response.data.message || "Login failed");

@@ -14,29 +14,25 @@ const Body = () => {
   console.log('user from store',userData);
   const fetchUser = async()=>{
     try {
-      if(userData){
-        return
-      }
       const response = await axios.get(`${BASE_URL}/profile/view`,{
         withCredentials : true
       })
-      console.log(response);
+      console.log('response',response.data.data);
       if(response.data.success){
          dispatch(addUser(response.data.data))
       }
     } catch (error) {
       if(error.status === 401){
-      navigate('/login')
+      navigate('/ ')
       }
       console.log(error.message || error)
     }
   }
 
   useEffect(()=>{
-    // if(!userData){
      fetchUser()
-    // }
   },[])
+
   return (
     <div>
     <NavBar />
