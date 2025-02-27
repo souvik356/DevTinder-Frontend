@@ -23,7 +23,7 @@ const Body = () => {
       }
     } catch (error) {
       if(error.status === 401){
-      navigate('/ ')
+      navigate('/')
       }
       console.log(error.message || error)
     }

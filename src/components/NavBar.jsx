@@ -17,7 +17,7 @@ const NavBar = () => {
           })
           if(response.data.success){
             dispatch(removeUser('null'))
-            navigate('/')
+            navigate('/login')
           }
       } catch (error) {
          console.error(error.message || error)
@@ -26,7 +26,7 @@ const NavBar = () => {
   return (
     <div className="navbar bg-base-300 fixed top-0 h-[4 rem] z-50">
   <div className="flex-1">
-    <Link to="/feed" className="btn btn-ghost text-xl">😎DevTinder</Link>
+    <Link to="/" className="btn btn-ghost text-xl">😎DevTinder</Link>
   </div>
   <div className="flex-none gap-2 mx-5">
     {user.length !== 0 && (<div className="dropdown dropdown-end">

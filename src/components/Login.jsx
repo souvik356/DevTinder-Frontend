@@ -37,7 +37,7 @@ const Login = () => {
           setEmailId('');
           setPassword('');
           dispatch(addUser(response.data.data));
-          navigate('/feed');
+          navigate('/');
         }
       } catch (error) {
         console.error(error.response?.data || error.message); // Debugging
